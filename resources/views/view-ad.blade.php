@@ -28,7 +28,8 @@
                 <div class="d-flex flex-column justify-content-center align-items-center">
                     <p>Objavio korisnik: <a href="{{ route('profile', $ad->user->id) }}">{{$ad->user->name}}</a></p>
                     <p>Lokacija: {{$ad->location}}</p>
-                    <button type="submit" class="btn btn-primary">Kontaktiraj prodavca(ne radi)</button>
+                    <p>Kontakt telefon: {{$ad->phone}}</p>
+                    <button type="submit" class="btn btn-primary">Kontaktiraj prodavca</button>
                 </div>
             </div>
         </div>

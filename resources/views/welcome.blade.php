@@ -17,6 +17,7 @@
                         <a href="{{ route('view-ad', $ad->id) }}"><img class="img-hover" src="{{count($ad->images) ? asset($ad->images[0]->path) : 'https://via.placeholder.com/150'}}" style="object-fit:contain;" width="150px" height="150px"></a>
                         <p class="mx-5 align-self-center">{{$ad->description}}</p>
                     </div>    
+                    <p class="my-2">Kontakt telefon: {{$ad->phone}}</p>
                 </div>
             @endforeach
             <div class="pagination d-flex justify-content-center align-items-center">
