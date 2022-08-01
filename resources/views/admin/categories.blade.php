@@ -59,7 +59,7 @@
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title">Izmena imena za: {{$category->name}}</h5>
+                                <h5 class="modal-title">Izmena naziva kategorije: {{$category->name}}</h5>
                             </div>
                             <div class="modal-body">
                                 <form action="{{ route('edit-category', $category->id) }}" method="POST">

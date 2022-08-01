@@ -71,7 +71,7 @@ class AdminController extends Controller
     public function edit_category(Request $request, Category $id){
         if(Auth::user()->isAdmin()){
             $id->name = $request->editCategory;
-            $id->save();
+            if($id->isDirty()) $id->save();
             return redirect()->back();
         }
         else return abort(404);
@@ -140,7 +140,7 @@ class AdminController extends Controller
     public function edit_condition(Request $request, Condition $id){
         if(Auth::user()->isAdmin()){
             $id->name = $request->editCondition;
-            $id->save();
+            if($id->isDirty()) $id->save();
             return redirect()->back();
         }
         else return abort(404);
